@@ -3,14 +3,14 @@ import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
 import App from './app'
 import routes from './router'
-// import './assets/css/main.css'
+import ElementUI from 'element-ui'
+import './assets/css/reset.css'
 
-
-// Vue.config.devtools = true     //配置是否允许 vue-devtools 检查代码
 Vue.use(VueRouter)
 Vue.use(VueResource)
+Vue.use(ElementUI)
 
-let router = new VueRouter({
+const router = new VueRouter({
   mode: 'history',
   routes
 })
@@ -21,5 +21,5 @@ new Vue({
   components: {
     App: App
   },
-  router
+  router: router
 })
