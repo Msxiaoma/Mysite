@@ -2,7 +2,9 @@
   <div class="blog">
     <div class="layout-head">
       <ul>
-        <li>首 页</li>
+        <router-link to="/">
+          <li>首 页</li>
+        </router-link>
         <li @click="home()">框 架</li>
         <li>后 端</li>
         <li>网 络</li>
@@ -24,7 +26,6 @@
 </script>
 <style>
   .blog {
-    background: #141835;
     width: 100%;
     height: 100%;
   }
@@ -32,7 +33,8 @@
     position: relative;
     width: 100%;
     height: 60px;
-    border-bottom: 1px solid #000;
+    background: #363b63;
+    /* border-bottom: 1px solid #000; */
     /* opacity: 0.5; */
     /* background: url('../../static/img/bg.jpg'); */
   }

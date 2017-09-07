@@ -38,6 +38,6 @@ app.get('*', function (req, res) {
   res.send(html)
 })
 //启动一个服务并监听从 3000 端口进入的所有连接请求
-app.listen(process.env.PORT || 3000, function () {
-  console.log("Listen port:3000...")
+app.listen(process.env.PORT || 8888, function () {
+  console.log("Listen port:8888...")
 });
