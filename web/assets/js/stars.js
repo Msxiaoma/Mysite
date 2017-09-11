@@ -21,7 +21,7 @@ export default class Stars {
   }
   drawBackground() {
     let ctx = this.ctx
-    ctx.fillStyle = "#141835"
+    ctx.fillStyle = "#26292E"
     ctx.fillRect(0, 0, this.width, this.width)  //给画布填充背景
   }
   //画满天星

@@ -1,22 +1,37 @@
 <template>
   <div class="blog">
-    <div class="layout-head">
-      <ul>
-        <router-link to="/">
-          <li>首 页</li>
-        </router-link>
-        <li @click="home()">框 架</li>
-        <li>后 端</li>
-        <li>网 络</li>
-        <li>算 法</li>
-        <li>趣 闻</li>
-      </ul>
+    <Myheader value="博 客"></Myheader>
+    <div class="blog-content">
+      <div class="menu"></div>
+      <div class="content-right">
+        <div class="article-inner">
+          <div class="article-title">
+            <img src="../../static/img/vue.png" width="55px" height="40px">
+            <div class="article-date"><img src="../../static/img/date.png" width="20px" height="20px" class="date-icon">2017-09-11</div>
+            <div>图片轮播</div>
+          </div>
+        </div>
+        <div class="article-inner">
+          <div class="article-title">
+            <img src="../../static/img/vue.png" width="55px" height="40px">
+          </div>
+        </div>
+        <div class="article-inner">
+          <div class="article-title">
+            <img src="../../static/img/vue.png" width="55px" height="40px">
+          </div>
+        </div>
+      </div>
     </div>
-    <router-view></router-view>
+  </div>
   </div>
 </template>
 <script>
+  import Myheader from './header'
   export default {
+    components: {
+      Myheader
+    },
     methods: {
       home() {
         this.$router.push('/blog/base')
@@ -27,30 +42,46 @@
 <style>
   .blog {
     width: 100%;
-    height: 100%;
   }
-  .layout-head {
+  .blog-content {
+    position: relative;
+    height: 100%;
+    background: #2F3238;
+    /* padding: 50px 0;  */
+  }
+  .menu {
+    position: absolute;
+    left: 40px;
+    bottom: 0px;
+    width: 180px;
+    height: inherit;
+    background: green;
+  }
+  .content-right {
+    margin-left: 300px;
+    padding-right: 80px;
+    padding-bottom: 80px;
+  }
+  .article-inner {
+    margin-top: 80px;
+    width: 100%;
+    height: 777px;
+    background: #fff;
+    display: inline-block;
+  }
+  .article-date {
+    float: right;
+    margin: 20px 55px 0px 0px;
+    font-size: 18px;
+    color: #888;
+  }
+  .date-icon {
+    padding-bottom: 5px;
+    padding-right: 5px;
+  }
+  .article-title {
     position: relative;
     width: 100%;
-    height: 60px;
-    background: #363b63;
-    /* border-bottom: 1px solid #000; */
-    /* opacity: 0.5; */
-    /* background: url('../../static/img/bg.jpg'); */
-  }
-  ul {
-    margin: 0px auto;
-    padding: 0px;
-  }
-  ul li {
-    padding: 20px 0px;
-    list-style: none;
-    float: left;
-    font-size: 1rem;
-    width: 14%;
-    height: 50px;
-    text-align: right;
-    color: #fff;
-    cursor: pointer;
+    height: 100px;
   }
 </style>

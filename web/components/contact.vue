@@ -1,6 +1,15 @@
 <template>
-  <div class="blog">
-    <div class="site-name">Technology of the planet</div>
-    <canvas id="canvas"></canvas>
+  <div class="contact">
+    <Myheader value="联 系"></Myheader>
   </div>
 </template>
+<script>
+import Myheader from './header'
+export default {
+  components: {
+    Myheader
+  }
+}
+</script>
+<style>
+</style>

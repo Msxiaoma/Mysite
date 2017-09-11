@@ -1,9 +1,8 @@
 <template>
-  <div class="project">
-    <Myheader value="项 目"></Myheader>
+  <div class="more">
+    <Myheader value="更 多"></Myheader>
   </div>
 </template>
-
 <script>
 import Myheader from './header'
 export default {
